@@ -1,7 +1,7 @@
 
 public class Caneta {
 
-	public String	modelo;
+	public String modelo;
 	public String cor;
 	private Double ponta;
 	protected Integer carga;
