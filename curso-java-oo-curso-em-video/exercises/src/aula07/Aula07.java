@@ -25,7 +25,9 @@ public class Aula07 {
 			l[i].status();
 		}
 		
-		
+		Luta UEC01 = new Luta();
+		UEC01.marcarLuta(l[0], l[1]);
+		UEC01.lutar();
 	}
 
 }
