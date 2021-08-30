@@ -70,11 +70,6 @@ public class Luta {
 			System.out.println("Luta não aprovada.");
 		}
 	}
-
-	
-	
-	
-	
 	public Lutador getDesafiado() {
 		return desafiado;
 	}
@@ -106,15 +101,4 @@ public class Luta {
 	public void setAprovada(Boolean aprovada) {
 		this.aprovada = aprovada;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

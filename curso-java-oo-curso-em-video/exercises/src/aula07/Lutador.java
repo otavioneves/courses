@@ -6,8 +6,6 @@ public class Lutador {
 	private Integer idade, vitorias, derrotas, empates;
 	private Double altura, peso;
 	
-	
-	
 	public void ganharLuta() {
 		this.setVitorias(this.getVitorias()+1);	
 	}
@@ -42,8 +40,6 @@ public class Lutador {
 		System.out.println(this.getDerrotas() + " derrotas e ");
 		System.out.println(this.getEmpates() + " empates. ");
 	}
-	
-	
 	
 	
 	public Lutador(String nome, String nacionalidade, Integer idade, Integer vitorias,
@@ -124,11 +120,4 @@ public class Lutador {
 		this.peso = peso;
 		this.setCategoria();
 	}
-	
-	
-	
-	
-	
-	
-	
 }

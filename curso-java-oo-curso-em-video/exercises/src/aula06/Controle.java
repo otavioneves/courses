@@ -142,7 +142,6 @@ public class Controle implements Controlador{
 		}
 	}
 
-
 	@Override
 	public void pause() {
 		if (this.getLigado().equals(false)){
@@ -152,6 +151,5 @@ public class Controle implements Controlador{
 			this.setTocando(false);
 		}
 	}
-	
 	
 }
