@@ -10,5 +10,18 @@ As dependências escolhidas foram:
 - Spring Boot DevTools : funcionalidade para o desenvolvimento;
 - Thymeleaf : para o HTML;
 - Spring Web.
-OBSERVAÇÕES
+
+### OBSERVAÇÕES
 - static {} : o bloco estático é rodado logo ao iniciar uma aplicação java.
+- ModelAndVieiew : tipo de varíavel utilizada para renderizar páginas.
+```
+@GetMapping("/contatos")
+	public ModelAndView listar() {
+		ModelAndView modelAndView = new ModelAndView("listar");
+		
+		modelAndView.addObject("contatos", LISTA_CONTATOS);
+		
+		return modelAndView;
+	}
+```
+- Padrão JavaBean: o padrão diz que os atributos tem que ser privados, e acessados apenas pelos métodos da própria classe, como os getters e setters. Quanto for usar o tipo de varíavel o boolean primitivo, usar `is` ao invés de `get`.
