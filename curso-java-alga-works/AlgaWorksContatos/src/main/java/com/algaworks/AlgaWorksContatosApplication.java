@@ -9,5 +9,4 @@ public class AlgaWorksContatosApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(AlgaWorksContatosApplication.class, args);
 	}
-
 }

@@ -1,8 +1,8 @@
 package com.algaworks;
 
 public class Contato {
-
-private String id;
+	
+	private String id;
 	
 	private String nome;
 	
@@ -43,9 +43,4 @@ private String id;
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
-	
-	
-	
-	
 }

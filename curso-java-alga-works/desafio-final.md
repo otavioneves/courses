@@ -25,3 +25,8 @@ As dependências escolhidas foram:
 	}
 ```
 - Padrão JavaBean: o padrão diz que os atributos tem que ser privados, e acessados apenas pelos métodos da própria classe, como os getters e setters. Quanto for usar o tipo de varíavel o boolean primitivo, usar `is` ao invés de `get`.
+- Para gerar um identificador aleatório podemos utilizar o UUID, conforme abaixo:
+```
+String id = UUID.randomUUID().toString();
+contato.setId(id);
+```
