@@ -15,13 +15,23 @@ public class teste {
 		contaP1.sacar(200);
 		contaP1.calcularNovoSaldo(1);
 		
-		contaE1.depositar(200);
+		contaE1.depositar(80);
 		contaE1.sacar(80);
 		contaE1.sacar(200);
 		
 		contaP1.exibirDadosConta();
 		contaE1.exibirDadosConta();
 		
+		contaE1.sacar(200);
+		contaE1.sacar(200);
+		
+		contaE1.exibirDadosConta();
+		
+		contaE1.depositar(200);
+		contaE1.depositar(200);
+		contaE1.depositar(200);
+		contaE1.depositar(200);
+
 		
 	}
 

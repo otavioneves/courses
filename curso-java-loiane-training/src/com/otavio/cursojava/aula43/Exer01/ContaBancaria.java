@@ -13,18 +13,26 @@ public class ContaBancaria {
 		this.saldo = 0.0;
 	}
 	
+	public ContaBancaria() {
+	}
+	
 	
 	public void sacar(double saque) {
 		if (this.getSaldo()<0||this.getSaldo()<saque) {
-			System.out.println("Saldo insuficiente");
+			System.out.println("---");
+			System.out.println("Saque:" + saque);
+			System.out.println("Saldo insuficiente. Saque não efetuado");
+			System.out.println("Saldo: " + this.getSaldo());
+			System.out.println("---");
 		} else {
 			this.setSaldo(saldo - saque);
+			System.out.println("---");
+			System.out.println("Saque:" + saque);
+			System.out.println("Saldo: " + this.getSaldo());
+			System.out.println("---");
 		}
-		System.out.println("---");
-		System.out.println("Saque:" + saque);
-		System.out.println("Saldo: " + this.getSaldo());
-		System.out.println("---");
 	}
+	
 	
 	public void depositar(double deposito) {
 		this.setSaldo(saldo + deposito);
@@ -34,6 +42,11 @@ public class ContaBancaria {
 		System.out.println("---");
 	}
 	
+	public void exibirDadosConta () {
+		System.out.println("Nome: " + this.getNomeCliente());
+		System.out.println("Número da Conta: " + this.getNumConta());
+		System.out.println("Saldo: " + this.getSaldo());
+	}
 	
 	
 	public String getNomeCliente() {
