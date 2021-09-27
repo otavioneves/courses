@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="curso-java-alga-works/AlgaWorksContatos/.mvn/wrapper"/>
+	<classpathentry kind="src" path="curso-java-alga-works/AlgaWorksContatos/src/main/java"/>
+	<classpathentry kind="src" path="curso-java-alga-works/exercises/src"/>
+	<classpathentry kind="src" path="curso-java-loiane-training/src"/>
+	<classpathentry kind="src" path="curso-java-oo-curso-em-video/exercises/src"/>
+	<classpathentry kind="output" path="curso-java-alga-works/AlgaWorksContatos/target/classes"/>
+</classpath>

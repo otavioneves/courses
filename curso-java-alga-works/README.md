@@ -1,1 +1,1 @@
-Esse repositório contém exercícios feitos no curso de Lógica de Programação com Java na plataforma AlgaWorks, com o Professor Alexandre Afonso.
+This repository contains exercises done in the course of Programming Logic with Java on the AlgaWorks platform, with Teacher Alexandre Afonso.

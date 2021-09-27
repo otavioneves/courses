@@ -1,1 +1,1 @@
-Esse repositório contém exercícios feitos no curso de Java e Orientação à Objetos na plataforma Curso em Vídeo, com o Professor Gustavo Guanabara.
+This repository contains exercises done in the Java and Object Orientation course on the Curso em Vídeo platform, with Teacher Gustavo Guanabara.

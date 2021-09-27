@@ -1,1 +1,1 @@
-Esse repositório contém estudos feitos no curso de Java e Orientação à Objetos na plataforma Loiane Training, com a Professora Loiane Groner.
+This repository contains studies made in the Java and Object Orientation course on the Loiane Training platform, with Teacher Loiane Groner.
