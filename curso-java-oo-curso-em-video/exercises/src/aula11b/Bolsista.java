@@ -2,6 +2,7 @@ package aula11b;
 
 public class Bolsista extends Aluno {
 
+
 	private Double Bolsa;
 	
 	public void renovarBolsa() {
