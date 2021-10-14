@@ -1,4 +1,4 @@
-package exer01_05;
+package vetor.exer01_05;
 
 public class Exer01 {
 

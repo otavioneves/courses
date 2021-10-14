@@ -1,4 +1,4 @@
-package exer01_05;
+package vetor.exer06;
 
 import java.lang.reflect.Array;
 
