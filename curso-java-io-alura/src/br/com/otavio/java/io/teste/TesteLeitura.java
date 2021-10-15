@@ -15,7 +15,6 @@ public class TesteLeitura {
 		
 		BufferedReader br = new BufferedReader(isr);
 		
-				
 		String linha = br.readLine();
 		
 		while(linha != null) {
@@ -24,7 +23,6 @@ public class TesteLeitura {
 			linha = br.readLine();
 			
 		}
-		
 		
 		br.close();
 		
