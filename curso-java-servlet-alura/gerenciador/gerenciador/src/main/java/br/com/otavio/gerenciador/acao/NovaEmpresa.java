@@ -37,7 +37,7 @@ public class NovaEmpresa implements Acao {
 		
 		request.setAttribute("empresa", empresa.getNome());
 		
-		return "redirect:entrada?acao=ListaEmpresa";
+		return "redirect:entrada?acao=ListaEmpresas";
 	}
 	
 }

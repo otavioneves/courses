@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.otavio.gerenciador.acao.Acao;
 
-@WebServlet("/entrada")
+//@WebServlet("/entrada")
 public class UnicaEntradaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -19,6 +19,18 @@ public class UnicaEntradaServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		String paramAcao = request.getParameter("acao");	// pega o parâmetro ação
+		
+		// lógica aplicada no filtro
+//		HttpSession sessao = request.getSession();
+//		Boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
+//		Boolean naoEhUmaAcaoProtegida = paramAcao.equals("Login")|| paramAcao.equals("LoginForm");
+//		
+//		if (usuarioNaoEstaLogado && !naoEhUmaAcaoProtegida) {
+//			response.sendRedirect("entrada?acao=LoginForm");
+//			return;		// sai da execução
+//		}
+			
+		
 		String nomeDaClasse = "br.com.otavio.gerenciador.acao."+ paramAcao;
 		String nome;
 		
