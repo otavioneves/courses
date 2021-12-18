@@ -1,0 +1,11 @@
+<%
+
+
+%>
+
+
+<html>
+<body>
+	Empresa "+ nomeEmpresa + " Cadastrada com sucesso!
+</body>
+</html>
