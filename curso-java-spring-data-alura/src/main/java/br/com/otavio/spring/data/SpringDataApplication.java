@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import br.com.otavio.spring.data.service.CrudCargoService;
 import br.com.otavio.spring.data.service.CrudFuncionarioService;
 import br.com.otavio.spring.data.service.CrudUnidadeDeTrabalhoService;
+import br.com.otavio.spring.data.service.RelatorioFuncionarioDinamico;
 import br.com.otavio.spring.data.service.RelatoriosService;
 
 @SpringBootApplication
@@ -18,15 +19,21 @@ public class SpringDataApplication implements CommandLineRunner {
 	private final CrudFuncionarioService funcionarioService;
 	private final CrudUnidadeDeTrabalhoService unidadeDeTrabalhoService;
 	private final RelatoriosService relatoriosService;
+	private final RelatorioFuncionarioDinamico relatorioFuncionarioDinamico;
 
 	private Boolean system = true;
 
-	public SpringDataApplication(CrudCargoService cargoService, CrudFuncionarioService funcionarioService, CrudUnidadeDeTrabalhoService unidadeDeTrabalhoService, RelatoriosService relatoriosService) { // cria uma SpringDataApplication com uma instância do
-		// CargoRepository
+
+
+	public SpringDataApplication(CrudCargoService cargoService, CrudFuncionarioService funcionarioService,
+			CrudUnidadeDeTrabalhoService unidadeDeTrabalhoService, RelatoriosService relatoriosService,
+			RelatorioFuncionarioDinamico relatorioFuncionarioDinamico) {
+		super();
 		this.cargoService = cargoService;
 		this.funcionarioService = funcionarioService;
 		this.unidadeDeTrabalhoService = unidadeDeTrabalhoService;
 		this.relatoriosService = relatoriosService;
+		this.relatorioFuncionarioDinamico = relatorioFuncionarioDinamico;
 	}
 
 	public static void main(String[] args) {
@@ -44,6 +51,7 @@ public class SpringDataApplication implements CommandLineRunner {
 			System.out.println("2 - Funcionario");
 			System.out.println("3 - Unidade De Trabalho");
 			System.out.println("4 - Relatorios da aplicação");
+			System.out.println("5 - Relatorios Dinâmicos");
 			
 			int action = scanner.nextInt();
 
@@ -62,6 +70,10 @@ public class SpringDataApplication implements CommandLineRunner {
 			}
 			case 4: {
 				relatoriosService.inicial(scanner);
+				break;			
+			}
+			case 5: {
+				relatorioFuncionarioDinamico.inicial(scanner);
 				break;			
 			}
 			default:
