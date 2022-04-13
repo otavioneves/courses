@@ -2,7 +2,11 @@ package br.com.otavio.mvc.mudi.repository;
 
 import java.util.List;
 
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import br.com.otavio.mvc.mudi.model.Pedido;
@@ -11,7 +15,15 @@ import br.com.otavio.mvc.mudi.model.StatusPedido;
 
 @Repository
 public interface PedidoRepository extends JpaRepository<Pedido, Long>{
+	
+	
+	@Cacheable("books")
+	List<Pedido> findByStatus(StatusPedido status, Pageable sort);		// o próprio Spring Data faz o select pra gente, ao colocar o nome certo
 
-	List<Pedido> findByStatus(StatusPedido status);		// o próprio Spring Data faz o select pra gente, ao colocar o nome certo
+	@Query("SELECT p FROM Pedido p JOIN p.user u WHERE u.username = :username")
+	List<Pedido> findAllByUsuario(@Param("username") String username);
+
+	@Query("SELECT p FROM Pedido p JOIN p.user u WHERE u.username = :username and p.status = :status")
+	List<Pedido> findByStatusAndUser(@Param("username") StatusPedido status, @Param("username") String usernam);
 	
 }
