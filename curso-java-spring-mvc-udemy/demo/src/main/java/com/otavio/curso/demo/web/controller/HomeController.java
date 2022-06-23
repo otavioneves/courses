@@ -1,4 +1,4 @@
-package com.otavio.curso.demo.controller;
+package com.otavio.curso.demo.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

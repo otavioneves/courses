@@ -1,5 +1,7 @@
 package com.otavio.curso.demo.service;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,7 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 		funcionarioDao.update(funcionario);
 	}
 
+	@Transactional(readOnly = false)
 	@Override
 	public void excluir(Long id) {
 		funcionarioDao.delete(id);
@@ -44,5 +47,30 @@ public class FuncionarioServiceImpl implements FuncionarioService {
 		
 		return funcionarioDao.findAll();
 	}
+	
+	@Override
+	public List<Funcionario> buscarPorNome(String nome) {
+		
+		return funcionarioDao.findByNome(nome);
+	}
+	
+	@Override
+	public List<Funcionario> buscarPorCargo(Long id) {
+		
+		return funcionarioDao.findByCargoId(id);
+	}
+
+	@Override
+    public List<Funcionario> buscarPorDatas(LocalDate entrada, LocalDate saida) {
+	    if (entrada != null && saida != null) {	    	
+            return funcionarioDao.findByDataEntradaDataSaida(entrada, saida);
+        } else if (entrada != null) {        	
+	        return funcionarioDao.findByDataEntrada(entrada);
+        } else if (saida != null) {        	
+	        return funcionarioDao.findByDataSaida(saida);
+        } else {
+        	return new ArrayList<>();
+        }
+    }
 
 }

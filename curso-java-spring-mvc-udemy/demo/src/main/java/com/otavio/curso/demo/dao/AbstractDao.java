@@ -46,7 +46,7 @@ public abstract class AbstractDao<T, PK extends Serializable> {
 		return entityManager.createQuery("from " + entityClass.getSimpleName(), entityClass).getResultList();
 	}
 
-	protected List<T> createQuery(String jpql, Object... params) {
+	protected List<T> createQuery(String jpql, Object... params) {		// método para criar queries
 		TypedQuery<T> query = entityManager.createQuery(jpql, entityClass);
 		for (int i = 0; i < params.length; i++) {
 			query.setParameter(i + 1, params[i]);
